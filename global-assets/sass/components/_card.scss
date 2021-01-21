@@ -1,0 +1,31 @@
+
+.vm{
+    // Block
+    &-card{
+
+        @extend .d-flex, .justify-content-center, .align-items-center;
+
+        &--horizontal{
+            @extend .flex-column;
+        }
+
+
+        // Element
+
+        &__list{
+            background: $color-secondary;            
+            @extend .d-flex, .justify-content-center, .align-items-center, .mx-3;
+        
+
+            // modifier
+            &--dark{
+                background: $color-primary;
+                color: #fff;
+            }
+        
+        }
+
+    }
+   
+}
+

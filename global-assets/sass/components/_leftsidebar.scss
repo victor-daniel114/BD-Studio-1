@@ -1,0 +1,93 @@
+
+.sidebar{     
+    z-index: 3;   
+    width: 5rem;      
+    //position: fixed;
+    @extend .position-fixed;
+    top: 3.5rem;
+    bottom: 0;
+    z-index: 10;
+    padding: 0;
+    &--dark{
+        background-color: #444854;
+    }
+    & .nav-bar{
+ 
+        &__list {
+            margin: 0;
+             padding: 0;
+            list-style: none;
+            @extend .position-relative;
+            z-index: 1;
+        }
+        &__item{
+            @extend .position-relative, .text-center ;
+            // left: 1.7rem;
+           // width: calc(100% - 1.7rem);
+            font-size: 1rem;
+            
+            border-bottom: 1px solid #535965;
+            box-shadow: inset 0 -1px 0 0 #303135 ;
+        }
+        
+        &__link{
+                cursor: pointer;
+                //display: block;
+               // position: relative;
+                @extend .d-block, .position-relative, .text-center , .text-decoration-none;
+                padding: .7rem 0.5rem;
+               // text-align: center;
+                color: #6b7388;
+                font-size: .8rem;
+                //text-decoration: none;
+                &__img{
+                    width: 2rem;
+                    height: 2rem;
+                    //vertical-align: middle;
+                    @extend .align-middle;
+                    &--bg{
+                         fill: #6b7388;
+                    
+                    }
+                    
+                }
+                &:hover{
+                    background-color: #fff;
+                    &__img{
+                         &:hover{
+                             color: rgb(0, 0, 0);
+                         }
+                        &--bg{
+                             fill: #87A2D2;
+                             &:hover{
+                                fill:#f00;
+                            }
+                        }
+                        
+                    }
+                }
+            &--active{
+                background-color: $color-secondary;
+                //color: #fff;
+                 
+            }
+            
+            }
+           
+              
+      }
+}
+
+
+
+.message {
+    padding: .5em;
+  }
+  
+  .important {
+    font-weight: bold;
+  }
+  
+  .message-error {
+    @extend .message, .important;
+  }
